@@ -10,6 +10,8 @@ import pandas as pd                     # Manejo de grandes cantidades de datos
 import numpy as np                # Manejo de datos numéricos
 import matplotlib.pyplot as mp 
 
+# TODO: Yo eliminaría esta parte que hace que sea un poco lento el funcionamiento normal
+#       del programa
 from PyQt5 import uic, QtWidgets, QtCore
 from matplotlib.backends.backend_qt5agg import (NavigationToolbar2QT as NavigationToolbar)
 url = 'https://ourworldindata.org/coronavirus/country/mexico?country=~MEX'
@@ -41,7 +43,7 @@ datosMexico.iloc[0]
 print(datosMexico)
 TotalContagiosG = mp.plot(Totalcontagios)
 NuevosContagiosG = mp.plot(Nuevoscontagios)
-
+# Hasta acá, es quitar esto y abrir al momento de que se busque alguna URL
 
 qtCreatorFile = ('GuiCoronavirusdata.ui') # Aquí va el nombre de tu archivo
 
